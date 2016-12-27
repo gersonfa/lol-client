@@ -1,5 +1,5 @@
 {
-  "name": "ng2-gerson-boilerplate",
+  "name": "ng2-boilerplate",
   "version": "1.0.0",
   "description": "Boilerplate for angular 2 applications with ng-semantic",
   "main": "index.js",
@@ -13,8 +13,8 @@
     "build": "webpack",
     "start": "webpack-dev-server"
   },
-  "author": "Gerson Osvaldo Flores Acuña",
-  "license": "ISC",
+  "author": "Gerson Osvaldo Flores Acuña [gerson71fa@hotmail.com]",
+  "license": "MIT",
   "dependencies": {
     "@angular/common": "^2.0.1",
     "@angular/compiler": "^2.0.1",
