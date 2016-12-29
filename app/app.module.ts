@@ -6,9 +6,14 @@ import {FormsModule, ReactiveFormsModule} from '@angular/forms';
 
 // Route
 import {routing} from './app.route';
+//  Services
+import {SummonerService} from './_services/summonerService'
 // Components
 import { MainComponent } from './app.component';
 import {HomeComponent} from './HomeComponent/home.component'
+import {SearchComponent} from './SearchComponent/search.component'
+import {SummonerComponent} from './SummonerComponent/summoner.component'
+import {GameComponent} from './GameComponent/game.component'
 
 
 @NgModule({
@@ -22,10 +27,16 @@ import {HomeComponent} from './HomeComponent/home.component'
   ],
   declarations: [
     MainComponent,
-    HomeComponent
+    HomeComponent,
+    SearchComponent,
+    SummonerComponent,
+    GameComponent
   ],
   schemas: [CUSTOM_ELEMENTS_SCHEMA],
-  bootstrap: [MainComponent]
+  bootstrap: [MainComponent],
+  providers: [
+    SummonerService
+  ]
 })
 export class MainModule {
 

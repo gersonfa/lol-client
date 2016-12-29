@@ -6,7 +6,7 @@
   "repository" :
   { 
     "type" : "git",
-    "url" : "https://github.com/gersonfa/ng2-boilerplate"
+    "url" : "https://github.com/gersonfa/lol-client.git"
   },
   "scripts": {
     "postinstall": "typings install",

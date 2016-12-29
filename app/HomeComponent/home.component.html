@@ -1,0 +1,19 @@
+<h1>League of Legends</h1>
+<lol-search (emitter)="setSummoner($event)" (gameEmitter)="setGames($event)"></lol-search>
+
+<div class="ui internally celled grid">
+  <div class="row">
+    <div class="three wide column">
+      <lol-summoner [summoner]="summoner"></lol-summoner>
+    </div>
+    <div class="ten wide column">
+      <div class="ui items" *ngIf="games">
+        <lol-game *ngFor="let game of games" [game]="game"></lol-game>
+      </div>
+      <div class="three wide column">
+
+      </div>
+    </div>
+  </div>
+</div>
+

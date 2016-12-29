@@ -1,0 +1,84 @@
+<div class="ui grid" [ngClass]="game.stats.win ? 'victory' : 'failed'">
+  <div class="sixteen wide column" [ngClass]="game.stats.win ? 'title-victory' : 'title-failed'"><h5>{{game.subType === 'NORMAL' ? 'Normal' : game.subType === 'RANKED_SOLO_5x5' ? 'Clasificatoria' : 'Aram'}} </h5></div>
+  <div class="three wide column">
+    <img class="ui medium circular image" src="../../public/champs/{{game.championId}}.png">
+  </div>
+  <div class="two wide column">
+    <p> 
+      <span [ngClass]="game.stats.win === true ? 'result-win' : 'result-fail'">{{game.stats.win === true ? 'Victoria' : 'Derrota'}}</span> <br> <br>
+      <span class="resume">{{game.stats.championsKilled ? game.stats.championsKilled : 0 }}/{{game.stats.numDeaths ? game.stats.numDeaths : 0}}/{{game.stats.assists ? game.stats.assists : 0}}</span>
+    </p>
+  </div>
+  <div class="two wide column">
+    <img class="ui mini image" src="../../public/spells/{{game.spell1}}.png" alt="">
+    <img class="ui mini image" src="../../public/spells/{{game.spell2}}.png" alt="">
+  </div>
+  <div class="four wide column">
+    <div style="display: inline-block; width: 77%;">
+    <img *ngIf="game.stats.item0" class="items-lol ui mini image" src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{game.stats.item0}}.png" alt="">
+    <img *ngIf="game.stats.item1" class="items-lol ui mini image" src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{game.stats.item1}}.png" alt="">
+    <img *ngIf="game.stats.item2" class="items-lol ui mini image" src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{game.stats.item2}}.png" alt="">
+    <img *ngIf="game.stats.item3" class="items-lol ui mini image" src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{game.stats.item3}}.png" alt="">
+    <img *ngIf="game.stats.item4" class="items-lol ui mini image" src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{game.stats.item4}}.png" alt="">
+    <img *ngIf="game.stats.item5" class="items-lol ui mini image" src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{game.stats.item5}}.png" alt="">
+    </div>
+    <div style="display: inline-block; width: 20.9%;">
+      <img class="ui mini image" src="http://ddragon.leagueoflegends.com/cdn/6.24.1/img/item/{{game.stats.item6}}.png" alt=""> 
+    </div>
+  </div>
+  <div class="five wide column">
+    <img *ngFor="let player of game.team1Players" class="items-lol ui mini image" src="../../public/champs/{{player.championId}}.png" alt="">
+    <img *ngIf="game.teamId === 100" class="items-lol ui mini image" src="../../public/champs/{{game.championId}}.png" alt="">
+    <img *ngFor="let player of game.team2Players" class="items-lol ui mini image" src="../../public/champs/{{player.championId}}.png" alt="">
+    <img *ngIf="game.teamId === 200" class="items-lol ui mini image" src="../../public/champs/{{game.championId}}.png" alt="">
+  </div>
+</div>
+
+
+<style>
+  .items-lol {
+    display: inline-block !important;
+  }
+
+  .victory {
+    background-color: #8C9EFF;
+    margin-bottom: 25px;
+  }
+
+  .title-victory {
+    background-color: #304FFE;
+    color: white;
+    text-align: end;
+  }
+
+  .failed {
+    background-color: #9E9E9E;
+    margin-bottom: 25px;
+  }
+
+  .title-failed {
+    background-color: #616161;
+    color: white;
+    text-align: end;
+  }
+
+  .gameType {
+    font-size: 1em;
+  }
+
+  .result-win {
+    color: #2E7D32;
+    font-size: 1.5em;
+  }
+
+  .result-fail {
+    color: #C62828;
+    font-size: 1.5em;
+  }
+
+  .resume {
+    font-size: 1.2em;
+    font-weight: bold;
+    color: white;
+  }
+</style>

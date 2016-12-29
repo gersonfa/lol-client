@@ -1,0 +1,5 @@
+
+<div class="ui fluid massive action input">
+  <input type="text" placeholder="Summoner name" #summonerName (keyup.enter)="searchSummoner(summonerName.value)">
+  <div class="ui button" (click)="searchSummoner(summonerName.value)" style="background-color: #512DA8; color: white">Search</div>
+</div>
