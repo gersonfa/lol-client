@@ -1,7 +1,7 @@
 <div class="ui grid" [ngClass]="game.stats.win ? 'victory' : 'failed'">
   <div class="sixteen wide column" [ngClass]="game.stats.win ? 'title-victory' : 'title-failed'"><h5>{{game.subType === 'NORMAL' ? 'Normal' : game.subType === 'RANKED_SOLO_5x5' ? 'Clasificatoria' : 'Aram'}} </h5></div>
   <div class="three wide column">
-    <img class="ui medium circular image" src="../../public/champs/{{game.championId}}.png">
+    <img class="ui medium circular image" src="https://raw.githubusercontent.com/gersonfa/lol-client/master/public/champs/{{game.championId}}.png">
   </div>
   <div class="two wide column">
     <p> 
@@ -10,8 +10,8 @@
     </p>
   </div>
   <div class="two wide column">
-    <img class="ui mini image" src="../../public/spells/{{game.spell1}}.png" alt="">
-    <img class="ui mini image" src="../../public/spells/{{game.spell2}}.png" alt="">
+    <img class="ui mini image" src="https://raw.githubusercontent.com/gersonfa/lol-client/master/public/spells/{{game.spell1}}.png" alt="">
+    <img class="ui mini image" src="https://raw.githubusercontent.com/gersonfa/lol-client/master/public/spells/{{game.spell2}}.png" alt="">
   </div>
   <div class="four wide column">
     <div style="display: inline-block; width: 77%;">
@@ -27,10 +27,10 @@
     </div>
   </div>
   <div class="five wide column">
-    <img *ngFor="let player of game.team1Players" class="items-lol ui mini image" src="../../public/champs/{{player.championId}}.png" alt="">
-    <img *ngIf="game.teamId === 100" class="items-lol ui mini image" src="../../public/champs/{{game.championId}}.png" alt="">
-    <img *ngFor="let player of game.team2Players" class="items-lol ui mini image" src="../../public/champs/{{player.championId}}.png" alt="">
-    <img *ngIf="game.teamId === 200" class="items-lol ui mini image" src="../../public/champs/{{game.championId}}.png" alt="">
+    <img *ngFor="let player of game.team1Players" class="items-lol ui mini image" src="https://raw.githubusercontent.com/gersonfa/lol-client/master/public/champs/{{player.championId}}.png" alt="">
+    <img *ngIf="game.teamId === 100" class="items-lol ui mini image" src="https://raw.githubusercontent.com/gersonfa/lol-client/master/public/champs/{{game.championId}}.png" alt="">
+    <img *ngFor="let player of game.team2Players" class="items-lol ui mini image" src="https://raw.githubusercontent.com/gersonfa/lol-client/master/public/champs/{{player.championId}}.png" alt="">
+    <img *ngIf="game.teamId === 200" class="items-lol ui mini image" src="https://raw.githubusercontent.com/gersonfa/lol-client/master/public/champs/{{game.championId}}.png" alt="">
   </div>
 </div>
 
